@@ -36,7 +36,7 @@ public class DockerServlet extends HttpServlet {
     // logger.debug("Debug message");
 
     private static DockerClientConfig config = null;
-
+    =+
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String containerId = null;
         String containerIp = null;
