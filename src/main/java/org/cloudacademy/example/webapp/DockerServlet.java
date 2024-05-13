@@ -24,6 +24,12 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.Collections;
 
+int target = -5;
+int num = 3;
+
+target =- num;  // Noncompliant; target = -3. Is that really what's meant?
+target =+ num; // Noncompliant; target = 3
+
 @WebServlet(name = "DockerServlet", urlPatterns = { "/home", "/action1", "/action2", "/action3" }, loadOnStartup = 1)
 public class DockerServlet extends HttpServlet {
     final static String CONTAINER_NETWORK_NAME = System.getenv("CONTAINER_NETWORK");
@@ -36,7 +42,7 @@ public class DockerServlet extends HttpServlet {
     // logger.debug("Debug message");
 
     private static DockerClientConfig config = null;
-    =+
+    
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String containerId = null;
         String containerIp = null;
